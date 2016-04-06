@@ -1,0 +1,7 @@
+*.pyc
+*.log
+conf/release_info.config
+conf/tasklinejumpinglist.config
+conf/tasklist.config
+images/*.zip
+recoverimages/*.zip

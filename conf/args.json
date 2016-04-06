@@ -1,0 +1,155 @@
+{
+    "username":"zliangx",
+    "password":"lzw,123,2",
+    "cutpowertime":"12",
+    "restarttimes":"3",
+    "rerunacstimes":"0",
+    "reflashtimes":"3",
+    "serialcode":{
+        "power":{"lte":"COM10","3gr":"COM11"},
+        "perf":{"lte":"COM3","3gr":"COM3"}
+    },
+    "campaign":{
+        "autorun":{
+            "power":{
+                "lte":"./FT/pnp/CAMPAIGN/SH_PNP_POWER_IOCARD_SLTE.xml",
+                "3gr":"./FT/pnp/CAMPAIGN/SH_PNP_POWER_IOCARD_SOFIA3GR.xml"
+            },
+            "perf":{
+                "lte":"./SI/pnp/perf/CAMPAIGN/SH_PNP_PERF_IOCARD_SOFIALTE.xml",
+                "3gr":"./SI/pnp/perf/CAMPAIGN/SH_PNP_PERF_IOCARD_SOFIA3GR.xml"
+            }
+        },
+        "bisect":{
+            "power":{
+                "lte":"./campaign/power/$campaign$",
+                "3gr":"./campaign/power/$campaign$"
+            },
+            "perf":{
+                "lte":"./campaign/performance/$campaign$",
+                "3gr":"./campaign/performance/$campaign$"
+            }
+        }
+    },
+    "device":{
+        "power":{
+            "lte":"SLTI20MR6-Android-M",
+            "3gr":"S3GR10M6S-Android-LLP"
+        },
+        "perf":{
+            "lte":"SLTI20MR6-Android-M",
+            "3gr":"S3GR10M6S-Android-LLP"
+        }
+    },
+    "benchcfg":{
+        "power":{
+            "lte":"./FT/pnp/BENCHCFG/Bench_Config_Pnp_slte.xml",
+            "3gr":"./FT/pnp/BENCHCFG/Bench_Config_Pnp_s3gr.xml"
+        },
+        "perf":{
+            "lte":"./SI/pnp/perf/BENCHCFG/Bench_Config_Pnp_slte.xml",
+            "3gr":"./SI/pnp/perf/BENCHCFG/Bench_Config_Pnp_s3gr.xml"
+        }
+    },
+    "arg_cr":"'--cr lab_acspnp:gtysu38/'",
+    "flashcmd":{
+		"lte":"cflasher --non-interactive -c smp_fls_config --flash-file ",
+		"3gr":"cflasher --non-interactive -c smp_fls_config --flash-file "
+	},
+
+    "caseInfo":{
+        "perf":{
+            "1": {"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_antutu"},
+            "2": {"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_stream"},
+            "3": {"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_benchmarkPI"},
+            "4": {"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_andeBench_Java"},
+            "5": {"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_quadrant"},
+            "6": {"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_iozone_sequencial"},
+            "7": {"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_iozone_random"},
+            "8": {"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_coldboot"},
+            "9": {"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_timetoturnondisplay"},
+            "10":{"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_camera_launch2preview"},
+            "11":{"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_camera_shot2shot"},
+            "12":{"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_defaultapp_coldlaunch"},
+            "13":{"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_benchmarkPI"},
+            "14":{"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_glbenchmark_27_TRex"},
+            "15":{"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_smartBench"},
+            "16":{"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_octane_online"},
+            "17":{"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_fishtank_online"},
+            "18":{"largeisbetter":1,"margin":0.1,"campaign":"test_pnp_gfxbench_3_Manhattan"}
+        }, 
+        "power":{
+            "1":{"largeisbetter":1,"margin":0.1,"campaign":"ST_STATIC_CONTENT_ON_DISPLAY_aka_IDLE_DISPLAY_ON"},
+            "2":{"largeisbetter":1,"margin":0.1,"campaign":"ST_FLIGHT_MODE_S3_ALL_RADIO_DISABLED"},
+            "3":{"largeisbetter":1,"margin":0.1,"campaign":"ST_VIDEO_PLAYBACK_H264_1080P_30FPS_DEVICE_DISPLAY"},
+            "4":{"largeisbetter":1,"margin":0.1,"campaign":"ST_MUSIC_PLAYBACK_VIA_WIRED_HEADSET_MP3"},
+            "5":{"largeisbetter":1,"margin":0.1,"campaign":"ST_USER_MODE_IMAGE_CAPTURE_INTEL_APPLICATION"},
+            "6":{"largeisbetter":1,"margin":0.1,"campaign":"ST_VIDEO_RECORDING_H264_BP_720p_30FPS_INTEL_APPLICATION"}
+        }
+    },
+    "localImage":{
+        "lte":"/WD-3T/acs_img/sofia/lte",
+        "3gr":"/WD-3T/acs_img/sofia/3gr"
+    },
+    "i_name":{
+        "lte":"r2_sltmrdV12-flashfiles-M0m%s.zip",
+        "3gr":"r2_s3gr20m6s-flashfiles-L1m%s.zip"
+    },
+    "orgUrl":{
+        "lte":"https://tmsstor001.tm.intel.com/artifactory/cactus-absp-tl/master-mergerequest/%s/r2_sltmrdV12/userdebug/r2_sltmrdV12-flashfiles-M0m%s.zip",
+        "3gr":"https://tmsstor001.tm.intel.com/artifactory/cactus-absp-tl/llp_mr1-mergerequest/%s/r2_s3gr20m6s/userdebug/r2_s3gr20m6s-flashfiles-L1m%s.zip"
+    },
+    "OrignList":{
+        "lte":"https://buildbot.tl.intel.com/absp/builders/master-mergerequest?numbuilds=190",
+        "3gr":"https://buildbot.tl.intel.com/absp/builders/llp_mr1-mergerequest?numbuilds=100"
+    },
+    
+
+    "versionUrl":{
+        "M":"https://buildbot.tl.intel.com/absp/builders/master-latest",
+        "L":"https://buildbot.tl.intel.com/absp/builders/llp_mr1-latest"
+    },
+    "versionLog":{
+        "L":"Runed_L_Release.log",
+        "M":"Runed_M_Release.log"
+    },
+    "template_url":{
+        "lte":{
+            "L":[],
+            "M":["https://mcg-depot.intel.com/artifactory/cactus-absp-jf/master-latest/%s/r2_sltmrdV12/userdebug/r2_sltmrdV12-flashfiles-M1l%s.zip",
+                "https://ncsstor001.nc.intel.com/artifactory/cactus-absp-jf/master-latest/%s/r2_sltmrdV12/userdebug/r2_sltmrdV12-flashfiles-M1l%s.zip",
+                "https://tmsstor001.tm.intel.com/artifactory/cactus-absp-jf/master-latest/%s/r2_sltmrdV12/userdebug/r2_sltmrdV12-flashfiles-M1l%s.zip"               
+               ]
+        },
+        "3gr":{
+            "L":["https://mcg-depot.intel.com/artifactory/cactus-absp-jf/llp_mr1-latest/%s/r2_s3gr20m6s/userdebug/r2_s3gr20m6s-flashfiles-L1l%s.zip",
+                "https://ncsstor001.nc.intel.com/artifactory/cactus-absp-jf/llp_mr1-latest/%s/r2_s3gr20m6s/userdebug/r2_s3gr20m6s-flashfiles-L1l%s.zip",               
+                "https://tmsstor001.tm.intel.com/artifactory/cactus-absp-jf/llp_mr1-latest/%s/r2_s3gr20m6s/userdebug/r2_s3gr20m6s-flashfiles-L1l%s.zip"
+               ],
+            "M":["https://mcg-depot.intel.com/artifactory/cactus-absp-jf/master-latest/%s/r2_s3gr20m6s/userdebug/r2_s3gr20m6s-flashfiles-M1l%s.zip",
+                "https://ncsstor001.nc.intel.com/artifactory/cactus-absp-jf/master-latest/%s/r2_s3gr20m6s/userdebug/r2_s3gr20m6s-flashfiles-M1l%s.zip",
+                "https://tmsstor001.tm.intel.com/artifactory/cactus-absp-jf/master-latest/%s/r2_s3gr20m6s/userdebug/r2_s3gr20m6s-flashfiles-M1l%s.zip"               
+               ]
+        }
+    },
+    "imageTpl":{
+        "lte":{
+            "L":"https://mcg-depot.intel.com/artifactory/cactus-absp-%s/llp_mr1-engineering/%s/r2_sltmrdV12/userdebug/r2_sltmrdV12-flashfiles-L1e%s.zip",
+            "M":"https://mcg-depot.intel.com/artifactory/cactus-absp-%s/master-engineering/%s/r2_sltmrdV12/userdebug/r2_sltmrdV12-flashfiles-M1e%s.zip"
+        },
+        "3gr":{
+            "L":"https://mcg-depot.intel.com/artifactory/cactus-absp-%s/llp_mr1-engineering/%s/r2_s3gr20m6s/userdebug/r2_s3gr20m6s-flashfiles-L1e%s.zip",
+            "M":"https://mcg-depot.intel.com/artifactory/cactus-absp-%s/master-engineering/%s/r2_s3gr20m6s/userdebug/r2_s3gr20m6s-flashfiles-M1e%s.zip"
+        }
+    },
+    "recoverImage":{
+        "lte":{
+            "L":"",
+            "M":"../recoverimages/r2_sltmrdV12-flashfiles-M1l000449.zip"
+        },
+        "3gr":{
+            "L":"../recoverimages/r2_s3gr20m6s-flashfiles-L1l000358.zip",
+            "M":"../recoverimages/r2_s3gr20m6s-flashfiles-M1l000449.zip"
+        }
+    }
+}
